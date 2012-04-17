@@ -1,19 +1,21 @@
+#! C:/Python27/python.exe
 ##################
 ## PyTodo List
 ##################
 import datetime
 import os
 
-guiSize = 20
+guiSize = 40
 taskList = {}
 
 clear = lambda: os.system('cls')
 
 def header():
     print ""
-    print "#"*guiSize
-    print "# ToDo List"
-    print "#"*guiSize
+    print "#" * guiSize
+    print "TODO List".center(guiSize)
+    print ":)".center(guiSize)
+    print "#" * guiSize
     print ""
 
 def printGUI():
@@ -52,9 +54,10 @@ def deleteEntry():
         count += 1
     
     print ""
-    taskToRemove = raw_input("Choose a task to remove: ")
+    taskToRemove = int(raw_input("Choose a task to remove: "))
     
-    del(taskList[indexList[int(taskToRemove)]])
+    if( taskToRemove in indexList ):
+        del(taskList[indexList[int(taskToRemove)]])
         
 def mainLoop():
     while(1):
@@ -67,11 +70,13 @@ def mainLoop():
 
         action = raw_input("Choose an option: ")        
         
-        if(action == "q"):
-            break #Kill program
-            
-        performAction[int(action)]()
-
+        if( isinstance(action,str)):
+            if(action == "q"):
+                break #Kill program
+        else:
+            if (int(action) in performAction):
+                performAction[int(action)]()
+    
 performAction = {
     1: refresh,
     2: addEntry,
