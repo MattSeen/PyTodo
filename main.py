@@ -44,9 +44,18 @@ def addEntry():
         taskList[newTaskName] = datetime.datetime.now()
 
 def deleteEntry():
-    print ""
-    print "No Delete Function Yet"
+    count = 1
+    indexList = {}
+    for key, value in taskList.iteritems():
+        print count, key, timeSinceStamp(value)
+        indexList[count] = key
+        count += 1
     
+    print ""
+    taskToRemove = raw_input("Choose a task to remove: ")
+    
+    del(taskList[indexList[int(taskToRemove)]])
+        
 def mainLoop():
     while(1):
         printGUI()

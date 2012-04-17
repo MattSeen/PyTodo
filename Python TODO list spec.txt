@@ -1,0 +1,91 @@
+Python TODO list:
+================
+
+GUI design
+
+      ########################################
+      ##         Python TODO List 0.1       ##
+      ##                :-D                 ##
+      ########################################
+      #
+      # Todo  
+      # ------------
+      # > Task * [Taken 1d]
+      # > Task 2
+      # > Task 3 [Took 2d]
+      #
+      # 1] Add a task
+      # 2] Start a task
+      # 3] Finish a task
+      # 4] Remove a task
+      # 5] Refresh list
+      
+] The user should be able to add a task to the todo list
+] The user should be able to remove the task from the todo list
+] The user should be able to refresh the list
+] The user should be able to start a task
+] The user should be able to tell the difference between a started task and any other entry in the list
+] The user should be able to see the time a current task is taking
+] The user should be able to see the time taken by previous tasks
+
+Project Specs
+] The TODO list will be saved as a CSV file
+   ]] <name>, <date added>
+] When a task is started it shall be saved to a DOING list
+   ]] <name>, <date added>, <date started>
+] When a task is finished it shall be saved to a DONE list
+   ]] <name>, <date added>, <date finished>
+
+===================================================
+
+      ########################################
+      ##         Python TODO List 0.5       ##
+      ##                :-D                 ##
+      ########################################
+      #
+      # Todo (1)  
+      # ------------
+      # > Task   
+      #
+      # Doing (2) 
+      # ------------
+      # > Task [1d]
+      #
+      # Done (3)
+      # ------------
+      # > Task [4d]
+      #
+      # > Enter a section to see available options 
+
+] The user should be able to add a task to the todo list
+] The user should be able to scrap* a task from the TODO section
+] The user should be able to promote a TODO TASK to a DOING TASK
+] The user should be able to be able to finalize a DOING TASK to a DONE TASK
+] The user should be able to scrap* a task from the DOING list
+] The user should be able to clear DONE TASKS at any point
+] The user should be able to refreash the view to see the time estimates
+
+* Scrap will not destory the task, it will be removed from the current file and saved in an archive prefix with "Scraped"
+===================================================
+
+      ########################################
+      ##         Python TODO List 1.0       ##
+      ##                :-D                 ##
+      ########################################
+
+         Todo (1)  |  Doing (2)  |  Done (3)
+      ------------------------------------------
+         > Task    | > Task [1d] | > abcdef [4d]
+                   |             |
+                   |----STALE----|
+                   | > Old [7d]  |
+                   
+      > Enter a section to see available options
+      > 
+
+==================================================
+
+] The user should be able to add tasks to the TODO list.
+] The user should be able to promote a TODO task to a different state.
+] The user should be able to do DOING tasks concurrently
+] Any task that has stayed on the TODO or DOING section for more than 5 days should be flagged as stale and in need of review
