@@ -1,7 +1,7 @@
 ##################
 ## PyTodo List
 ##################
-from datetime import datetime
+import datetime
 import os
 
 guiSize = 20
@@ -28,8 +28,9 @@ def printGUI():
     print ""
 
 def timeSinceStamp(taskTime):
-    
-    return taskTime
+    timeNow = datetime.datetime.now()
+    timeSince = timeNow - taskTime
+    return timeSince
     
 def refresh():
     print ""
@@ -40,7 +41,7 @@ def addEntry():
     print ""
     newTaskName = raw_input("Enter a new for your new task: ")
     if( newTaskName != ""):
-        taskList[newTaskName] = datetime.now()
+        taskList[newTaskName] = datetime.datetime.now()
 
 def deleteEntry():
     print ""
