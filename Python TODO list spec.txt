@@ -28,13 +28,6 @@ GUI design
 ] The user should be able to see the time a current task is taking
 ] The user should be able to see the time taken by previous tasks
 
-Project Specs
-] The TODO list will be saved as a CSV file
-   ]] <name>, <date added>
-] When a task is started it shall be saved to a DOING list
-   ]] <name>, <date added>, <date started>
-] When a task is finished it shall be saved to a DONE list
-   ]] <name>, <date added>, <date finished>
 
 ===================================================
 
@@ -65,7 +58,6 @@ Project Specs
 ] The user should be able to clear DONE TASKS at any point
 ] The user should be able to refreash the view to see the time estimates
 
-* Scrap will not destory the task, it will be removed from the current file and saved in an archive prefix with "Scraped"
 ===================================================
 
       ########################################
